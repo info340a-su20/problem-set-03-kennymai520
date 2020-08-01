@@ -1,4 +1,66 @@
+* { box-sizing: border-box; } /* recommended for item sizing */
+
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+main {
+  flex: 1;
+}
+
+
+.flex-container {
+  display: flex;
+  height: 100%
+}
+
+div > section {
+  padding: 1em;
+}
+
+.flex-item1 {
+  flex-basis: 240px;
+}
+
+.flex-item2 {
+  flex: 1;
+  background-color: #eee;
+}
+
+.flex-item3 {
+  flex-basis: 180px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.card-container {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*.card-items class selector does not work on the card, why? */
+section div div {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    }
+
+div > img {
+  border-radius: 10px 10px 0 0 ;
+}
+
+div > p {
+  padding: .5rem 1rem;
   margin: 0;
 }
